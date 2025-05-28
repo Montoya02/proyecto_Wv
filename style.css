@@ -286,7 +286,7 @@
         .section-title {
             text-align: center;
             font-size: 2.5rem;
-            color: #2c3e50;
+            color: #6d8fb1;
             margin-bottom: 3rem;
             position: relative;
         }
@@ -760,4 +760,101 @@ body.dark-mode .hero::after {
     50% {
         box-shadow: 0 4px 20px rgba(74, 144, 226, 0.6);
     }
+}
+
+.article-card {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease;
+}
+
+/* Image overlay effect */
+.article-image {
+    position: relative;
+    overflow: hidden;
+}
+
+.article-image::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(74, 144, 226, 0.7);
+    opacity: 0;
+    transition: all 0.4s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2rem;
+    content: "Read Article →";
+}
+
+.article-card:hover .article-image::after {
+    opacity: 1;
+}
+
+.article-card:hover .image-cover {
+    transform: scale(1.1);
+}
+
+.image-cover {
+    transition: transform 0.5s ease;
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(74, 144, 226, 0.6); }
+  70% { box-shadow: 0 0 0 8px rgba(74, 144, 226, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(74, 144, 226, 0); }
+}
+
+
+
+/* Glow effect for social links */
+.social-link:hover {
+  box-shadow: 0 0 15px rgba(74, 144, 226, 0.7);
+  filter: brightness(1.2);
+}
+
+/* Dark mode toggle animation */
+.dark-toggle:hover {
+  transform: scale(1.15);
+  transition: transform 0.2s ease;
+}
+.article-image {
+  overflow: hidden;
+}
+
+.image-cover {
+  transition: transform 0.5s ease;
+}
+
+.article-card:hover .image-cover {
+  transform: scale(1.1);
+}
+
+.article-image::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(74, 144, 226, 0.7);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  font-size: 1.2rem;
+  content: "Read Article →";
+}
+
+.article-card:hover .article-image::after {
+  opacity: 1;
 }

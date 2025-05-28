@@ -114,3 +114,9 @@ function updateHeaderOnThemeChange() {
 
 // Smooth theme transition
 document.body.style.transition = 'background-color 0.3s ease, color 0.3s ease';
+
+document.querySelectorAll('.article-card').forEach((card, index) => {
+    card.style.transitionDelay = `${index * 0.1}s`;
+    observer.observe(card);
+});
+
