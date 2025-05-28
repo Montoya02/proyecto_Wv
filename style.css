@@ -311,7 +311,7 @@
         }
         
         .article-card {
-            background: white;
+            background: rgb(255, 255, 255);
             border-radius: 20px;
             overflow: hidden;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
@@ -330,9 +330,15 @@
             position: relative;
             overflow: hidden;
         }
+        .image-cover {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
         
         .article-image::before {
-            content: '📊';
             position: absolute;
             top: 50%;
             left: 50%;
@@ -429,7 +435,7 @@
             background: #4a90e2;
             border-radius: 50%;
             text-align: center;
-            line-height: 50px;
+            line-height: 65px;
             color: white;
             text-decoration: none;
             transition: all 0.3s ease;
@@ -443,7 +449,10 @@
         /* Responsive */
         @media (max-width: 768px) {
             .nav-links {
-                display: none;
+                display:flexbox;
+                font-size: 2rem;
+                top: 1rem;
+                right: 1rem;
             }
             
             .hero h1 {
@@ -557,3 +566,4 @@ body.dark-mode .social-link {
 body.dark-mode .social-link:hover {
     background: #357abd;
 }
+
