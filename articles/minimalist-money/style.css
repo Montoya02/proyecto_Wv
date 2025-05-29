@@ -87,7 +87,7 @@
         /* Article-specific styles */
         .article-hero {
             background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
-                        url('https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&h=500&q=80');
+                        url('../../img/hero-image.webp');
             background-size: cover;
             background-position: center;
             color: white;
