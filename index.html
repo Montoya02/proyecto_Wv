@@ -14,9 +14,9 @@
             <a href="./" class="logo">WittyVault</a>
             <ul class="nav-links">
                 <li><a href="./">Home</a></li>
-                <li><a href="#">About</a></li>
+                <li><a href="#about-section">About</a></li>
                 <li><a href="#">Articles</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="#contact-section">Contact</a></li>
                 <button id="darkModeToggle" class="dark-toggle material-icons">dark_mode</button>
 
             </ul>
@@ -70,30 +70,35 @@
             
             <div class="articles-grid">
                 <article class="article-card">
-                    <div class="article-image">
-                        <img src="img/magnifier1.jpg" alt="" class="image-cover">
-                    </div>
-                    <div class="article-content">
-                        <!-- <span class="article-category">Investment</span> -->
-                        <h3>Minimalist Money — Personal Finance for People Who Hate Finance</h3>
-                        <p>Skip the complicated budgets and spreadsheets. Learn how to manage your money with simple, automated systems that actually work even if you'd rather do anything else than think about finances.</p>
-                        <a href="articles/minimalist-money/" class="read-more">Read More</a>
-                    </div>
+                    <a href="articles/minimalist-money/" class="article-link">
+                        <div class="article-image">
+                            <img src="img/magnifier1.jpg" alt="" class="image-cover">
+                        </div>
+                        <div class="article-content">
+                            <!-- <span class="article-category">Investment</span> -->
+                            <h3>Minimalist Money — Personal Finance for People Who Hate Finance</h3>
+                            <p>Skip the complicated budgets and spreadsheets. Learn how to manage your money with simple, automated systems that actually work even if you'd rather do anything else than think about finances.</p>
+                            <span class="read-more">Read More</span>
+                        </div>
+                    </a>
                 </article>
                 
                 <article class="article-card">
-                    <div class="article-image">
-                        <img src="img/planner.jpg" alt="" class="image-cover">
-                    </div>
-                    <div class="article-content">
-                        <!-- <span class="article-category">Budgeting</span> -->
-                        <h3>Budget Templates and Financial Planners for Niche Professions</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                        <a href="articles/budget-templates/" class="read-more">Read More</a>
-                    </div>
+                    <a href="articles/minimalist-money/" class="article-link">
+                        <div class="article-image">
+                            <img src="img/planner.jpg" alt="" class="image-cover">
+                        </div>
+                        <div class="article-content">
+                            <!-- <span class="article-category">Budgeting</span> -->
+                            <h3>Budget Templates and Financial Planners for Niche Professions</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <span class="read-more">Read More</span>
+                        </div>
+                    </a>
                 </article>
                 
                 <article class="article-card">
+                    <a href="articles/minimalist-money/" class="article-link">
                     <div class="article-image">
                         <img src="img/couple.jpg" alt="" class="image-cover">
                     </div>
@@ -101,8 +106,9 @@
                         <!-- <span class="article-category">Retirement</span> -->
                         <h3>Couples Finance — Budgeting and Money Talks for Young Couples</h3>
                         <p>Finally, a guide to couple finances that doesn't assume you have it all figured out. Real advice for real couples navigating money, dreams, and everything in between.</p>
-                        <a href="articles/couples-finance/" class="read-more">Read More</a>
+                        <span class="read-more">Read More</span>
                     </div>
+                    </a>
                 </article>
                 
                 
@@ -113,14 +119,14 @@
     <footer id="contact">
         <div class="container">
             <div class="footer-content">
-                <div class="footer-section">
+                <div class="footer-section" id="about-section">
                     <h3>About WittyVault</h3>
                     <p>Think of us as a helpful companion on your path to financial freedom. We’re here to share honest advice, practical tips, and easy-to-follow guides to help you make smarter money choices.</p>
                 </div>
             </div>
             
-            <div class="social-links">
-                <a href="mailto:example@gmail.com" class="social-link">
+            <div class="social-links" id="contact-section">
+                <a href="mailto:example@gmail.com" class="social-link" id="contact-icon">
                     <span class="material-icons">mail</span>
                 </a>
             </div>

@@ -120,3 +120,108 @@ document.querySelectorAll('.article-card').forEach((card, index) => {
     observer.observe(card);
 });
 
+document.querySelectorAll('.article-link').forEach(link => {
+    link.addEventListener('mouseenter', function() {
+        this.querySelector('.article-image').style.transform = 'scale(1.1)';
+        const overlay = this.querySelector('.article-image::after');
+        if (overlay) overlay.style.opacity = '1';
+    });
+    
+    link.addEventListener('mouseleave', function() {
+        this.querySelector('.article-image').style.transform = 'scale(1)';
+        const overlay = this.querySelector('.article-image::after');
+        if (overlay) overlay.style.opacity = '0';
+    });
+});
+// This doesn't seem to chance anything
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href');
+        const target = document.querySelector(targetId);
+        
+        if (target) {
+            target.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    });
+});
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href');
+        const target = document.querySelector(targetId);
+        
+        if (target) {
+            target.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+            
+            // Add emphasis to contact icon
+            if (targetId === '#contact-section') {
+                const contactIcon = document.getElementById('contact-icon');
+                if (contactIcon) {
+                    // Remove any existing animation classes
+                    contactIcon.classList.remove('contact-emphasis');
+                    
+                    // Trigger reflow before adding class again
+                    void contactIcon.offsetWidth;
+                    
+                    // Add animation class
+                    contactIcon.classList.add('contact-emphasis');
+                    
+                    // Remove class after animation completes
+                    setTimeout(() => {
+                        contactIcon.classList.remove('contact-emphasis');
+                    }, 1500);
+                }
+            }
+        }
+    });
+});
+// Enhanced scroll function with contact emphasis
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href');
+        const target = document.querySelector(targetId);
+        
+        if (target) {
+            target.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+            
+            // Add emphasis to contact icon
+            if (targetId === '#contact-section') {
+                const contactIcon = document.getElementById('contact-icon');
+                if (contactIcon) {
+                    // Remove any existing animation classes
+                    contactIcon.classList.remove('contact-emphasis');
+                    
+                    // Trigger reflow before adding class again
+                    void contactIcon.offsetWidth;
+                    
+                    // Add animation class
+                    contactIcon.classList.add('contact-emphasis');
+                    
+                    // Remove class after animation completes
+                    setTimeout(() => {
+                        contactIcon.classList.remove('contact-emphasis');
+                    }, 1500);
+                    
+                    // Add additional visual cue for light mode
+                    if (!document.body.classList.contains('dark-mode')) {
+                        contactIcon.style.backgroundColor = '#4a90e2';
+                        setTimeout(() => {
+                            contactIcon.style.backgroundColor = '';
+                        }, 1500);
+                    }
+                }
+            }
+        }
+    });
+});

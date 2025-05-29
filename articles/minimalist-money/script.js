@@ -29,3 +29,81 @@
         
         // Smooth theme transition
         document.body.style.transition = 'background-color 0.3s ease, color 0.3s ease';
+/* Add button effects to category badge */
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href');
+        const target = document.querySelector(targetId);
+        
+        if (target) {
+            target.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+            
+            // Add emphasis to contact icon
+            if (targetId === '#contact-section') {
+                const contactIcon = document.getElementById('contact-icon');
+                if (contactIcon) {
+                    // Remove any existing animation classes
+                    contactIcon.classList.remove('contact-emphasis');
+                    
+                    // Trigger reflow before adding class again
+                    void contactIcon.offsetWidth;
+                    
+                    // Add animation class
+                    contactIcon.classList.add('contact-emphasis');
+                    
+                    // Remove class after animation completes
+                    setTimeout(() => {
+                        contactIcon.classList.remove('contact-emphasis');
+                    }, 1500);
+                }
+            }
+        }
+    });
+});
+// Enhanced scroll function with contact emphasis
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href');
+        const target = document.querySelector(targetId);
+        
+        if (target) {
+            target.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+            
+            // Add emphasis to contact icon
+            if (targetId === '#contact-section') {
+                const contactIcon = document.getElementById('contact-icon');
+                if (contactIcon) {
+                    // Remove any existing animation classes
+                    contactIcon.classList.remove('contact-emphasis');
+                    
+                    // Trigger reflow before adding class again
+                    void contactIcon.offsetWidth;
+                    
+                    // Add animation class
+                    contactIcon.classList.add('contact-emphasis');
+                    
+                    // Remove class after animation completes
+                    setTimeout(() => {
+                        contactIcon.classList.remove('contact-emphasis');
+                    }, 1500);
+                    
+                    // Add additional visual cue for light mode
+                    if (!document.body.classList.contains('dark-mode')) {
+                        contactIcon.style.backgroundColor = '#4a90e2';
+                        setTimeout(() => {
+                            contactIcon.style.backgroundColor = '';
+                        }, 1500);
+                    }
+                }
+            }
+        }
+    });
+});

@@ -858,3 +858,104 @@ body.dark-mode .hero::after {
 .article-card:hover .article-image::after {
   opacity: 1;
 }
+/* Make article link fill entire card */
+.article-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    height: 100%;
+}
+
+/* Adjust read-more styles */
+.read-more {
+    color: #4a90e2;
+    font-weight: bold;
+    position: relative;
+    display: inline-block;
+}
+
+.article-link:hover .read-more {
+    color: #357abd;
+}
+
+.read-more::after {
+    content: ' →';
+    transition: transform 0.3s ease;
+}
+
+.article-link:hover .read-more::after {
+    transform: translateX(5px);
+}
+
+/* Dark mode adjustments */
+body.dark-mode .read-more {
+    color: #4a90e2;
+}
+
+body.dark-mode .article-link:hover .read-more {
+    color: #357abd;
+}
+
+#about-section {
+    scroll-margin-top: 100px; /* Adjust based on your header height */
+}
+/* Contact icon emphasis animation */
+@keyframes contact-pulse-light {
+    0% { 
+        transform: scale(1); 
+        box-shadow: 0 0 0 0 rgba(53, 122, 189, 0.7);
+        background-color: rgba(255, 255, 255, 0.3);
+    }
+    70% { 
+        transform: scale(1.15); 
+        box-shadow: 0 0 0 15px rgba(53, 122, 189, 0.3);
+        background-color: rgba(255, 255, 255, 0.6);
+    }
+    100% { 
+        transform: scale(1); 
+        box-shadow: 0 0 0 0 rgba(53, 122, 189, 0);
+        background-color: transparent;
+    }
+}
+
+@keyframes contact-pulse-dark {
+    0% { 
+        transform: scale(1); 
+        box-shadow: 0 0 0 0 rgba(74, 144, 226, 0.7);
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+    70% { 
+        transform: scale(1.15); 
+        box-shadow: 0 0 0 15px rgba(74, 144, 226, 0.5);
+        background-color: rgba(255, 255, 255, 0.3);
+    }
+    100% { 
+        transform: scale(1); 
+        box-shadow: 0 0 0 0 rgba(74, 144, 226, 0);
+        background-color: transparent;
+    }
+}
+
+/* Apply animations based on theme */
+body:not(.dark-mode) .contact-emphasis {
+    animation: contact-pulse-light 1.5s ease-in-out;
+}
+
+body.dark-mode .contact-emphasis {
+    animation: contact-pulse-dark 1.5s ease-in-out;
+}
+
+/* Make the contact icon more prominent in light mode */
+body:not(.dark-mode) .social-link {
+    background-color: #4a90e2;
+    color: white;
+}
+
+body:not(.dark-mode) .social-link:hover {
+    background-color: #357abd;
+}
+
+/* Scroll margin for contact section */
+#contact-section {
+    scroll-margin-top: 100px;
+}
