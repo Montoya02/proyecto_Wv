@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Articles - WittyVault | Smart Financial Insights</title>
+    <meta name="description" content="Browse our collection of practical financial advice, budgeting tips, and money management insights designed to help you build a better financial future.">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="articles-style.css"></head>
+    
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <a href="../" class="logo">WittyVault</a>
+            <ul class="nav-links">
+                <li><a href="../">Home</a></li>
+                <li><a href="#contact-section">Contact</a></li>
+                <button id="darkModeToggle" class="dark-toggle material-icons">dark_mode</button>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="articles-hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Explore Our Smartest Reads</h1>
+                <p>Discover practical financial insights, budgeting strategies, and money mindset tips designed to transform your relationship with money.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="search-section">
+        <div class="container">
+            <div class="search-container">
+                <div class="search-box">
+                    <input 
+                        type="text" 
+                        class="search-input" 
+                        placeholder="Search articles by title or topic..."
+                        id="searchInput"
+                        aria-label="Search articles"
+                    >
+                    <span class="material-icons search-icon">search</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="filter-section">
+        <div class="container">
+            <div class="filter-tags">
+                <span class="filter-tag active" data-filter="all">All Articles</span>
+                <span class="filter-tag" data-filter="budgeting">Budgeting</span>
+                <span class="filter-tag" data-filter="investment">Investment</span>
+                <span class="filter-tag" data-filter="freelance">Freelancers</span>
+                <span class="filter-tag" data-filter="couples">Couples</span>
+                <span class="filter-tag" data-filter="mindset">Mental Clarity</span>
+                <span class="filter-tag" data-filter="career">Career</span>
+            </div>
+        </div>
+    </section>
+
+    <main class="articles-content">
+        <div class="container">
+            <div class="search-results" id="searchResults" style="display: none;"></div>
+            
+            <div class="articles-grid" id="articlesGrid">
+                <article class="article-card" data-tags="budgeting,mindset">
+                    <div class="article-image">
+                        <img src="../img/magnifier1.jpg" alt="Minimalist workspace with calculator and notebook">
+                    </div>
+                    <div class="article-content">
+                        <div class="article-tags">
+                            <span class="article-tag">Budgeting</span>
+                            <span class="article-tag">Mental Clarity</span>
+                        </div>
+                        <h3>Minimalist Money — Personal Finance for People Who Hate Finance</h3>
+                        <p>Skip the complicated budgets and spreadsheets. Learn how to manage your money with simple, automated systems that actually work.</p>
+                        <a href="../articles/minimalist-money/" class="article-link">Read More</a>
+                    </div>
+                </article>
+
+                <article class="article-card" data-tags="budgeting,career">
+                    <div class="article-image">
+                        <img src="../img/planner.jpg" alt="Medical stethoscope and financial planning documents">
+                    </div>
+                    <div class="article-content">
+                        <div class="article-tags">
+                            <span class="article-tag">Budgeting</span>
+                            <span class="article-tag">Career</span>
+                        </div>
+                        <h3>Budget Templates for Nurses: Smart Money Tools for Every Shift</h3>
+                        <p>Ready-to-use budget templates designed specifically for nurses working irregular hours and demanding schedules.</p>
+                        <a href="../articles/nurses-budget/" class="article-link">Read More</a>
+                    </div>
+                </article>
+
+                <article class="article-card" data-tags="couples,budgeting">
+                    <div class="article-image">
+                        <img src="../img/couple.jpg" alt="Young couple reviewing financial documents together">
+                    </div>
+                    <div class="article-content">
+                        <div class="article-tags">
+                            <span class="article-tag">Couples</span>
+                            <span class="article-tag">Budgeting</span>
+                        </div>
+                        <h3>Couples Finance — Budgeting and Money Talks for Young Couples</h3>
+                        <p>Real advice for real couples navigating money, dreams, and everything in between without the financial stress.</p>
+                        <a href="../articles/couples-finance/" class="article-link">Read More</a>
+                    </div>
+                </article>
+
+                <article class="article-card" data-tags="investment,mindset">
+                    <div class="article-image">
+                        <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=400&h=200&fit=crop&crop=center" alt="Investment growth chart and coins">
+                    </div>
+                    <div class="article-content">
+                        <div class="article-tags">
+                            <span class="article-tag">Investment</span>
+                            <span class="article-tag">Mental Clarity</span>
+                        </div>
+                        <h3>Investment Psychology: Why Your Brain Works Against Your Wallet</h3>
+                        <p>Understand the mental traps that sabotage your investment decisions and learn simple strategies to outsmart your own biases.</p>
+                        <a href="../articles/investment-psychology/" class="article-link">Read More</a>
+                    </div>
+                </article>
+
+                <article class="article-card" data-tags="freelance,career">
+                    <div class="article-image">
+                        <img src="../img/freelancer.webp" alt="Freelancer working on laptop in coffee shop">
+                    </div>
+                    <div class="article-content">
+                        <div class="article-tags">
+                            <span class="article-tag">Freelancers</span>
+                            <span class="article-tag">Career</span>
+                        </div>
+                        <h3>Freelancer's Financial Survival Guide: Irregular Income, Regular Savings</h3>
+                        <p>Master the art of financial stability when your income changes every month. Practical tips for freelancers and gig workers.</p>
+                        <a href="../articles/freelancer-finance/" class="article-link">Read More</a>
+                    </div>
+                </article>
+
+                <article class="article-card" data-tags="mindset,budgeting">
+                    <div class="article-image">
+                        <img src="../img/hero-image.webp" alt="Person meditating with financial goals in background">
+                    </div>
+                    <div class="article-content">
+                        <div class="article-tags">
+                            <span class="article-tag">Mental Clarity</span>
+                            <span class="article-tag">Budgeting</span>
+                        </div>
+                        <h3>Money Anxiety to Money Confidence: A Mental Reset</h3>
+                        <p>Transform your relationship with money by addressing the psychological roots of financial stress and building lasting confidence.</p>
+                        <a href="../articles/money-anxiety/" class="article-link">Read More</a>
+                    </div>
+                </article>                
+            </div>
+
+            <div class="no-results" id="noResults" style="display: none;">
+                <h3>No articles found</h3>
+                <p>Try adjusting your search terms or browse our available categories above.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>About WittyVault</h3>
+                    <p>Think of us as a helpful companion on your path to financial freedom. We're here to share honest advice, practical tips, and easy-to-follow guides to help you make smarter money choices.</p>
+                </div>
+            </div>
+            
+            <div class="social-links" id="contact-section">
+<a href="mailto:example@gmail.com" class="social-link" id="contact-icon">
+    <span class="material-icons">mail</span>
+</a>
+            </div>
+            
+            <p style="margin-top: 2rem; padding-top: 2rem; border-top: 1px solid #34495e; color: #bdc3c7;">
+                © 2025 WittyVault. All rights reserved. Make your financial future greater.
+            </p>
+        </div>
+    </footer>
+        <script src="articles-script.js"></script>
+</body>
+</html>
