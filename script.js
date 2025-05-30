@@ -225,3 +225,66 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         }
     });
 });
+// 
+//
+//
+ const contactIcon = document.getElementById('contact-icon');
+        const contactModal = document.getElementById('contactModal');
+        const closeModal = document.getElementById('closeModal');
+        const emailForm = document.getElementById('emailForm');
+        const successMessage = document.getElementById('successMessage');
+        
+        // Abrir modal
+        contactIcon.addEventListener('click', () => {
+            contactModal.style.display = 'flex';
+        });
+        
+        // Cerrar modal
+        closeModal.addEventListener('click', () => {
+            contactModal.style.display = 'none';
+        });
+        
+        // Cerrar modal haciendo clic fuera del contenido
+        window.addEventListener('click', (e) => {
+            if (e.target === contactModal) {
+                contactModal.style.display = 'none';
+            }
+        });
+        
+        // Manejar envío del formulario
+        emailForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            // Obtener valores del formulario
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value;
+            
+            // Crear el enlace mailto
+            const mailtoLink = `mailto:montoya8293@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(
+                `Nombre: ${name}\nEmail: ${email}\n\nMensaje:\n${message}`
+            )}`;
+            
+            // Abrir el cliente de correo
+            window.location.href = mailtoLink;
+            
+            // Mostrar mensaje de éxito
+            successMessage.style.display = 'block';
+            emailForm.reset();
+            
+            // Ocultar el mensaje después de 5 segundos
+            setTimeout(() => {
+                contactModal.style.display = 'none';
+                setTimeout(() => {
+                    successMessage.style.display = 'none';
+                }, 500);
+            }, 3000);
+        });
+        
+        // Cerrar con la tecla ESC
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && contactModal.style.display === 'flex') {
+                contactModal.style.display = 'none';
+            }
+        });
