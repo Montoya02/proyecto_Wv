@@ -190,19 +190,19 @@ if (clearSearchBtn) {
 document.addEventListener('DOMContentLoaded', function() {
     // Add dates to articles if not present
     const articles = document.querySelectorAll('.article-card');
-    const sampleDates = [
-        '2024-12-15', '2024-12-10', '2024-12-05',
-        '2024-11-28', '2024-11-20', '2024-11-15'
-    ];
+    //const sampleDates = [
+      //  '2024-12-15', '2024-12-10', '2024-12-05',
+      //  '2024-11-28', '2024-11-20', '2024-11-15'
+    //];
 
     articles.forEach((article, index) => {
         if (!article.querySelector('time')) {
             const articleContent = article.querySelector('.article-content');
             if (articleContent) {
-                const dateElement = document.createElement('time');
-                dateElement.className = 'article-date';
-                dateElement.setAttribute('datetime', sampleDates[index]);
-                dateElement.textContent = formatDate(sampleDates[index]);
+      //          const dateElement = document.createElement('time');
+        //        dateElement.className = 'article-date';
+          //      dateElement.setAttribute('datetime', sampleDates[index]);
+            //    dateElement.textContent = formatDate(sampleDates[index]);
                 articleContent.insertBefore(dateElement, articleContent.querySelector('p'));
             }
         }
