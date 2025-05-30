@@ -483,44 +483,46 @@ footer {
     .resource-item {
         padding: 1rem;
     }
+
     /* Fix resource section for mobile */
     .resources h3 {
         font-size: 1.2rem;
     }
-    
+
     .resource-list {
-        grid-template-columns: 1fr; /* Single column layout */
+        grid-template-columns: 1fr;
+        /* Single column layout */
         gap: 1rem;
     }
-    
+
     .resource-item {
         padding: 1.2rem;
     }
-    
+
     .resource-title {
         font-size: 1.1rem;
     }
-    
+
     .resource-author {
         font-size: 0.9rem;
     }
-    
+
     /* Improve quote blocks for mobile */
     .quote-block {
         padding: 1.2rem;
         margin: 1.5rem 0;
     }
-    
+
     .quote-text {
         font-size: 1.05rem;
         line-height: 1.5;
     }
-    
+
     .quote-block::before {
         top: -8px;
         font-size: 3rem;
     }
-    
+
     /* Fix text wrapping in resource section */
     .resources p {
         font-size: 0.95rem;
@@ -791,38 +793,43 @@ body:not(.dark-mode) .social-link:hover {
         padding-left: 1.5rem;
     }
 }
+
 /* Contact icon emphasis animation */
 @keyframes contact-pulse-light {
-    0% { 
-        transform: scale(1); 
+    0% {
+        transform: scale(1);
         box-shadow: 0 0 0 0 rgba(53, 122, 189, 0.7);
         background-color: rgba(255, 255, 255, 0.3);
     }
-    70% { 
-        transform: scale(1.15); 
+
+    70% {
+        transform: scale(1.15);
         box-shadow: 0 0 0 15px rgba(53, 122, 189, 0.3);
         background-color: rgba(255, 255, 255, 0.6);
     }
-    100% { 
-        transform: scale(1); 
+
+    100% {
+        transform: scale(1);
         box-shadow: 0 0 0 0 rgba(53, 122, 189, 0);
         background-color: transparent;
     }
 }
 
 @keyframes contact-pulse-dark {
-    0% { 
-        transform: scale(1); 
+    0% {
+        transform: scale(1);
         box-shadow: 0 0 0 0 rgba(74, 144, 226, 0.7);
         background-color: rgba(255, 255, 255, 0.1);
     }
-    70% { 
-        transform: scale(1.15); 
+
+    70% {
+        transform: scale(1.15);
         box-shadow: 0 0 0 15px rgba(74, 144, 226, 0.5);
         background-color: rgba(255, 255, 255, 0.3);
     }
-    100% { 
-        transform: scale(1); 
+
+    100% {
+        transform: scale(1);
         box-shadow: 0 0 0 0 rgba(74, 144, 226, 0);
         background-color: transparent;
     }
@@ -853,36 +860,40 @@ body:not(.dark-mode) .social-link:hover {
 }
 
 @keyframes contact-pulse-light {
-    0% { 
-        transform: scale(1); 
+    0% {
+        transform: scale(1);
         box-shadow: 0 0 0 0 rgba(53, 122, 189, 0.7);
         background-color: rgba(255, 255, 255, 0.3);
     }
-    70% { 
-        transform: scale(1.15); 
+
+    70% {
+        transform: scale(1.15);
         box-shadow: 0 0 0 15px rgba(53, 122, 189, 0.3);
         background-color: rgba(255, 255, 255, 0.6);
     }
-    100% { 
-        transform: scale(1); 
+
+    100% {
+        transform: scale(1);
         box-shadow: 0 0 0 0 rgba(53, 122, 189, 0);
         background-color: transparent;
     }
 }
 
 @keyframes contact-pulse-dark {
-    0% { 
-        transform: scale(1); 
+    0% {
+        transform: scale(1);
         box-shadow: 0 0 0 0 rgba(74, 144, 226, 0.7);
         background-color: rgba(255, 255, 255, 0.1);
     }
-    70% { 
-        transform: scale(1.15); 
+
+    70% {
+        transform: scale(1.15);
         box-shadow: 0 0 0 15px rgba(74, 144, 226, 0.5);
         background-color: rgba(255, 255, 255, 0.3);
     }
-    100% { 
-        transform: scale(1); 
+
+    100% {
+        transform: scale(1);
         box-shadow: 0 0 0 0 rgba(74, 144, 226, 0);
         background-color: transparent;
     }
@@ -914,36 +925,40 @@ body:not(.dark-mode) .social-link:hover {
 
 /* Contact icon emphasis animation */
 @keyframes contact-pulse-light {
-    0% { 
-        transform: scale(1); 
+    0% {
+        transform: scale(1);
         box-shadow: 0 0 0 0 rgba(53, 122, 189, 0.7);
         background-color: rgba(255, 255, 255, 0.3);
     }
-    70% { 
-        transform: scale(1.15); 
+
+    70% {
+        transform: scale(1.15);
         box-shadow: 0 0 0 15px rgba(53, 122, 189, 0.3);
         background-color: rgba(255, 255, 255, 0.6);
     }
-    100% { 
-        transform: scale(1); 
+
+    100% {
+        transform: scale(1);
         box-shadow: 0 0 0 0 rgba(53, 122, 189, 0);
         background-color: transparent;
     }
 }
 
 @keyframes contact-pulse-dark {
-    0% { 
-        transform: scale(1); 
+    0% {
+        transform: scale(1);
         box-shadow: 0 0 0 0 rgba(74, 144, 226, 0.7);
         background-color: rgba(255, 255, 255, 0.1);
     }
-    70% { 
-        transform: scale(1.15); 
+
+    70% {
+        transform: scale(1.15);
         box-shadow: 0 0 0 15px rgba(74, 144, 226, 0.5);
         background-color: rgba(255, 255, 255, 0.3);
     }
-    100% { 
-        transform: scale(1); 
+
+    100% {
+        transform: scale(1);
         box-shadow: 0 0 0 0 rgba(74, 144, 226, 0);
         background-color: transparent;
     }

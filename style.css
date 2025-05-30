@@ -386,7 +386,7 @@
      font-weight: bold;
      transition: all 0.3s ease;
      position: relative;
-     
+
  }
 
  .read-more:hover {
@@ -902,7 +902,7 @@
      font-weight: bold;
      position: relative;
      display: inline-block;
-     
+
  }
 
  .article-link:hover .read-more {
@@ -997,23 +997,23 @@
      scroll-margin-top: 100px;
  }
 
-.read-article {
-    font-weight: bold;
-    display: block;
-    margin: 3rem auto 0;
-    text-decoration: none;
-    text-align: center;
-    font-size: 1.1rem;
-    padding: 1rem 2rem;
-    border: 2px solid #4a90e2;
-    border-radius: 50px;
-    max-width: fit-content;
-    transition: all 0.3s ease;
-}
+ .read-article {
+     font-weight: bold;
+     display: block;
+     margin: 3rem auto 0;
+     text-decoration: none;
+     text-align: center;
+     font-size: 1.1rem;
+     padding: 1rem 2rem;
+     border: 2px solid #4a90e2;
+     border-radius: 50px;
+     max-width: fit-content;
+     transition: all 0.3s ease;
+ }
 
-.read-article:hover {
-    background-color: #4a90e2;
-    color: white;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 15px rgba(74, 144, 226, 0.4);
-}
+ .read-article:hover {
+     background-color: #4a90e2;
+     color: white;
+     transform: translateY(-2px);
+     box-shadow: 0 4px 15px rgba(74, 144, 226, 0.4);
+ }

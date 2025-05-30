@@ -13,10 +13,10 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 // Add scroll effect to header
-window.addEventListener('scroll', function() {
+window.addEventListener('scroll', function () {
     const header = document.querySelector('header');
     const isDarkMode = document.body.classList.contains('dark-mode');
-    
+
     if (window.scrollY > 100) {
         if (isDarkMode) {
             header.style.background = 'rgba(34, 34, 34, 0.98)';
@@ -42,7 +42,7 @@ const observerOptions = {
     rootMargin: '0px 0px -50px 0px'
 };
 
-const observer = new IntersectionObserver(function(entries) {
+const observer = new IntersectionObserver(function (entries) {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             entry.target.style.opacity = '1';
@@ -72,11 +72,11 @@ if (currentTheme) {
 // Toggle function
 toggle.addEventListener('click', () => {
     document.body.classList.toggle('dark-mode');
-    
+
     // Save theme preference
     const theme = document.body.classList.contains('dark-mode') ? 'dark-mode' : '';
     localStorage.setItem('theme', theme);
-    
+
     updateToggleIcon();
     updateHeaderOnThemeChange();
 });
@@ -92,7 +92,7 @@ function updateToggleIcon() {
 function updateHeaderOnThemeChange() {
     const header = document.querySelector('header');
     const isDarkMode = document.body.classList.contains('dark-mode');
-    
+
     if (window.scrollY > 100) {
         if (isDarkMode) {
             header.style.background = 'rgba(34, 34, 34, 0.98)';
@@ -121,13 +121,13 @@ document.querySelectorAll('.article-card').forEach((card, index) => {
 });
 
 document.querySelectorAll('.article-link').forEach(link => {
-    link.addEventListener('mouseenter', function() {
+    link.addEventListener('mouseenter', function () {
         this.querySelector('.article-image').style.transform = 'scale(1.1)';
         const overlay = this.querySelector('.article-image::after');
         if (overlay) overlay.style.opacity = '1';
     });
-    
-    link.addEventListener('mouseleave', function() {
+
+    link.addEventListener('mouseleave', function () {
         this.querySelector('.article-image').style.transform = 'scale(1)';
         const overlay = this.querySelector('.article-image::after');
         if (overlay) overlay.style.opacity = '0';
@@ -135,11 +135,11 @@ document.querySelectorAll('.article-link').forEach(link => {
 });
 // This doesn't seem to chance anything
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
+    anchor.addEventListener('click', function (e) {
         e.preventDefault();
         const targetId = this.getAttribute('href');
         const target = document.querySelector(targetId);
-        
+
         if (target) {
             target.scrollIntoView({
                 behavior: 'smooth',
@@ -153,26 +153,26 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         e.preventDefault();
         const targetId = this.getAttribute('href');
         const target = document.querySelector(targetId);
-        
+
         if (target) {
             target.scrollIntoView({
                 behavior: 'smooth',
                 block: 'start'
             });
-            
+
             // Add emphasis to contact icon
             if (targetId === '#contact-section') {
                 const contactIcon = document.getElementById('contact-icon');
                 if (contactIcon) {
                     // Remove any existing animation classes
                     contactIcon.classList.remove('contact-emphasis');
-                    
+
                     // Trigger reflow before adding class again
                     void contactIcon.offsetWidth;
-                    
+
                     // Add animation class
                     contactIcon.classList.add('contact-emphasis');
-                    
+
                     // Remove class after animation completes
                     setTimeout(() => {
                         contactIcon.classList.remove('contact-emphasis');
@@ -188,31 +188,31 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         e.preventDefault();
         const targetId = this.getAttribute('href');
         const target = document.querySelector(targetId);
-        
+
         if (target) {
             target.scrollIntoView({
                 behavior: 'smooth',
                 block: 'start'
             });
-            
+
             // Add emphasis to contact icon
             if (targetId === '#contact-section') {
                 const contactIcon = document.getElementById('contact-icon');
                 if (contactIcon) {
                     // Remove any existing animation classes
                     contactIcon.classList.remove('contact-emphasis');
-                    
+
                     // Trigger reflow before adding class again
                     void contactIcon.offsetWidth;
-                    
+
                     // Add animation class
                     contactIcon.classList.add('contact-emphasis');
-                    
+
                     // Remove class after animation completes
                     setTimeout(() => {
                         contactIcon.classList.remove('contact-emphasis');
                     }, 1500);
-                    
+
                     // Add additional visual cue for light mode
                     if (!document.body.classList.contains('dark-mode')) {
                         contactIcon.style.backgroundColor = '#4a90e2';

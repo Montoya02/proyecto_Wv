@@ -215,6 +215,8 @@ nav {
 .search-box {
     position: relative;
     width: 100%;
+    margin-top: 3rem;
+
 }
 
 .search-input {
@@ -404,6 +406,8 @@ nav {
     margin-bottom: 1.5rem;
     line-height: 1.6;
 }
+
+
 
 .article-link {
     color: #4a90e2;
@@ -643,38 +647,43 @@ body.dark-mode footer {
         font-size: 0.9rem;
     }
 }
+
 /* Contact icon emphasis animation */
 @keyframes contact-pulse-light {
-    0% { 
-        transform: scale(1); 
+    0% {
+        transform: scale(1);
         box-shadow: 0 0 0 0 rgba(53, 122, 189, 0.7);
         background-color: rgba(255, 255, 255, 0.3);
     }
-    70% { 
-        transform: scale(1.15); 
+
+    70% {
+        transform: scale(1.15);
         box-shadow: 0 0 0 15px rgba(53, 122, 189, 0.3);
         background-color: rgba(255, 255, 255, 0.6);
     }
-    100% { 
-        transform: scale(1); 
+
+    100% {
+        transform: scale(1);
         box-shadow: 0 0 0 0 rgba(53, 122, 189, 0);
         background-color: transparent;
     }
 }
 
 @keyframes contact-pulse-dark {
-    0% { 
-        transform: scale(1); 
+    0% {
+        transform: scale(1);
         box-shadow: 0 0 0 0 rgba(74, 144, 226, 0.7);
         background-color: rgba(255, 255, 255, 0.1);
     }
-    70% { 
-        transform: scale(1.15); 
+
+    70% {
+        transform: scale(1.15);
         box-shadow: 0 0 0 15px rgba(74, 144, 226, 0.5);
         background-color: rgba(255, 255, 255, 0.3);
     }
-    100% { 
-        transform: scale(1); 
+
+    100% {
+        transform: scale(1);
         box-shadow: 0 0 0 0 rgba(74, 144, 226, 0);
         background-color: transparent;
     }
@@ -707,4 +716,49 @@ body:not(.dark-mode) .social-link:hover {
 /* Ensure smooth scrolling works */
 html {
     scroll-behavior: smooth;
+}
+
+/* ----------------------------------- */
+.filter-section {
+    background: white;
+    padding: 0 0 2rem 0; 
+    position: relative;
+}
+.filter-tag{
+    margin-top: 1.5rem;
+}
+.filter-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 1rem; 
+    padding: 0.5rem 0; 
+}
+
+
+@media (max-width: 768px) {
+    .filter-tags {
+        gap: 0.8rem;
+        overflow-x: auto; 
+        justify-content: flex-start; 
+        padding: 0.5rem 1rem 1rem; 
+        margin-top: 0.5rem;
+        -webkit-overflow-scrolling: touch; 
+    }
+    
+    .filter-tag {
+        flex-shrink: 0; 
+    }
+}
+
+@media (max-width: 480px) {
+    .filter-tags {
+        gap: 0.6rem;
+    }
+    
+    .filter-tag {
+        padding: 0.4rem 1rem;
+        font-size: 0.9rem;
+    }
 }

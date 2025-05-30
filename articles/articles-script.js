@@ -13,7 +13,7 @@ toggle.addEventListener('click', () => {
     const theme = document.body.classList.contains('dark-mode') ? 'dark-mode' : '';
     localStorage.setItem('theme', theme);
     updateToggleIcon();
-        updateHeaderOnThemeChange();
+    updateHeaderOnThemeChange();
 
 });
 
@@ -30,7 +30,7 @@ const noResults = document.getElementById('noResults');
 const allArticles = Array.from(document.querySelectorAll('.article-card'));
 
 if (searchInput) {
-    searchInput.addEventListener('input', function() {
+    searchInput.addEventListener('input', function () {
         const searchTerm = this.value.toLowerCase().trim();
         filterArticles(searchTerm, getActiveFilter());
     });
@@ -40,7 +40,7 @@ if (searchInput) {
 const filterTags = document.querySelectorAll('.filter-tag');
 
 filterTags.forEach(tag => {
-    tag.addEventListener('click', function() {
+    tag.addEventListener('click', function () {
         filterTags.forEach(t => t.classList.remove('active'));
         this.classList.add('active');
 
@@ -86,9 +86,9 @@ document.body.style.transition = 'background-color 0.3s ease, color 0.3s ease';
 function updateHeaderOnThemeChange() {
     const header = document.querySelector('header');
     if (!header) return;
-    
+
     const isDarkMode = document.body.classList.contains('dark-mode');
-    
+
     if (window.scrollY > 100) {
         if (isDarkMode) {
             header.style.background = 'rgba(34, 34, 34, 0.98)';
@@ -109,7 +109,7 @@ function updateHeaderOnThemeChange() {
 }
 function updateResultsUI(visibleCount, searchTerm, filter) {
     const resultsCount = document.getElementById('resultsCount');
-    
+
     if (visibleCount === 0) {
         if (noResults) noResults.style.display = 'block';
         if (articlesGrid) articlesGrid.style.display = 'none';
@@ -141,7 +141,7 @@ function updateResultsUI(visibleCount, searchTerm, filter) {
 const sortSelect = document.getElementById('sortSelect');
 
 if (sortSelect) {
-    sortSelect.addEventListener('change', function() {
+    sortSelect.addEventListener('change', function () {
         const sortValue = this.value;
         sortArticles(sortValue);
     });
@@ -150,7 +150,7 @@ if (sortSelect) {
 function sortArticles(sortBy) {
     const articlesContainer = document.getElementById('articlesGrid');
     if (!articlesContainer) return;
-    
+
     const articles = Array.from(articlesContainer.children);
 
     articles.sort((a, b) => {
@@ -177,7 +177,7 @@ function sortArticles(sortBy) {
 const clearSearchBtn = document.getElementById('clearSearch');
 
 if (clearSearchBtn) {
-    clearSearchBtn.addEventListener('click', function() {
+    clearSearchBtn.addEventListener('click', function () {
         if (searchInput) {
             searchInput.value = '';
             filterArticles('', getActiveFilter());
@@ -187,22 +187,22 @@ if (clearSearchBtn) {
 }
 
 // Initialize
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     // Add dates to articles if not present
     const articles = document.querySelectorAll('.article-card');
     //const sampleDates = [
-      //  '2024-12-15', '2024-12-10', '2024-12-05',
-      //  '2024-11-28', '2024-11-20', '2024-11-15'
+    //  '2024-12-15', '2024-12-10', '2024-12-05',
+    //  '2024-11-28', '2024-11-20', '2024-11-15'
     //];
 
     articles.forEach((article, index) => {
         if (!article.querySelector('time')) {
             const articleContent = article.querySelector('.article-content');
             if (articleContent) {
-      //          const dateElement = document.createElement('time');
-        //        dateElement.className = 'article-date';
-          //      dateElement.setAttribute('datetime', sampleDates[index]);
-            //    dateElement.textContent = formatDate(sampleDates[index]);
+                //          const dateElement = document.createElement('time');
+                //        dateElement.className = 'article-date';
+                //      dateElement.setAttribute('datetime', sampleDates[index]);
+                //    dateElement.textContent = formatDate(sampleDates[index]);
                 articleContent.insertBefore(dateElement, articleContent.querySelector('p'));
             }
         }
@@ -220,7 +220,7 @@ function formatDate(dateString) {
 const loadMoreBtn = document.getElementById('loadMoreBtn');
 
 if (loadMoreBtn) {
-    loadMoreBtn.addEventListener('click', function() {
+    loadMoreBtn.addEventListener('click', function () {
         console.log('Load more articles functionality would go here');
     });
 }
@@ -228,31 +228,31 @@ if (loadMoreBtn) {
 // Contact emphasis functionality
 function setupContactEmphasis() {
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
+        anchor.addEventListener('click', function (e) {
             if (this.getAttribute('href') === '#contact-section') {
                 e.preventDefault();
                 const target = document.querySelector('#contact-section');
-                
+
                 if (target) {
                     target.scrollIntoView({
                         behavior: 'smooth',
                         block: 'start'
                     });
-                    
+
                     const contactIcon = document.getElementById('contact-icon');
                     if (contactIcon) {
                         // Reset animation
                         contactIcon.classList.remove('contact-emphasis');
                         void contactIcon.offsetWidth; // Trigger reflow
-                        
+
                         // Add animation class
                         contactIcon.classList.add('contact-emphasis');
-                        
+
                         // Remove animation class after it completes
                         setTimeout(() => {
                             contactIcon.classList.remove('contact-emphasis');
                         }, 1500);
-                        
+
                         // Additional visual cue for light mode
                         if (!document.body.classList.contains('dark-mode')) {
                             contactIcon.style.backgroundColor = '#4a90e2';
@@ -269,12 +269,12 @@ function setupContactEmphasis() {
 
 // Scroll effect for header
 function setupHeaderScrollEffect() {
-    window.addEventListener('scroll', function() {
+    window.addEventListener('scroll', function () {
         const header = document.querySelector('header');
         if (!header) return;
-        
+
         const isDarkMode = document.body.classList.contains('dark-mode');
-        
+
         if (window.scrollY > 100) {
             if (isDarkMode) {
                 header.style.background = 'rgba(34, 34, 34, 0.98)';
@@ -296,10 +296,10 @@ function setupHeaderScrollEffect() {
 }
 
 // Initialize effects
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     setupContactEmphasis();
     setupHeaderScrollEffect();
-    
+
     // Smooth theme transition
     document.body.style.transition = 'background-color 0.3s ease, color 0.3s ease';
 });
