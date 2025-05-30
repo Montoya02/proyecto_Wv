@@ -262,9 +262,9 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     const message = document.getElementById('message').value;
 
     const templateParams = {
-        from_name: name,
-        from_email: email,
-        subject: subject,
+        name: name,
+        email: email,
+        title: subject,
         message: message
     };
 
