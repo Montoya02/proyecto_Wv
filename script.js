@@ -253,34 +253,39 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         
         // Manejar envío del formulario
         emailForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            
-            // Obtener valores del formulario
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const subject = document.getElementById('subject').value;
-            const message = document.getElementById('message').value;
-            
-            // Crear el enlace mailto
-            const mailtoLink = `mailto:montoya8293@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(
-                `Nombre: ${name}\nEmail: ${email}\n\nMensaje:\n${message}`
-            )}`;
-            
-            // Abrir el cliente de correo
-            window.location.href = mailtoLink;
-            
-            // Mostrar mensaje de éxito
+    e.preventDefault();
+
+    // Recoger datos del formulario
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const subject = document.getElementById('subject').value;
+    const message = document.getElementById('message').value;
+
+    const templateParams = {
+        from_name: name,
+        from_email: email,
+        subject: subject,
+        message: message
+    };
+
+    // Enviar con EmailJS
+    emailjs.send('service_zqw9dbq', 'template_8s62web', templateParams)
+        .then(function(response) {
+            console.log('Correo enviado con éxito', response.status, response.text);
             successMessage.style.display = 'block';
             emailForm.reset();
-            
-            // Ocultar el mensaje después de 5 segundos
+
             setTimeout(() => {
                 contactModal.style.display = 'none';
                 setTimeout(() => {
                     successMessage.style.display = 'none';
                 }, 500);
             }, 3000);
+        }, function(error) {
+            alert("Hubo un error al enviar el correo. Intenta de nuevo.");
+            console.error('Error al enviar correo:', error);
         });
+});
         
         // Cerrar con la tecla ESC
         document.addEventListener('keydown', (e) => {
