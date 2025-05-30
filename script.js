@@ -228,31 +228,31 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 // 
 //
 //
- const contactIcon = document.getElementById('contact-icon');
-        const contactModal = document.getElementById('contactModal');
-        const closeModal = document.getElementById('closeModal');
-        const emailForm = document.getElementById('emailForm');
-        const successMessage = document.getElementById('successMessage');
-        
-        // Abrir modal
-        contactIcon.addEventListener('click', () => {
-            contactModal.style.display = 'flex';
-        });
-        
-        // Cerrar modal
-        closeModal.addEventListener('click', () => {
-            contactModal.style.display = 'none';
-        });
-        
-        // Cerrar modal haciendo clic fuera del contenido
-        window.addEventListener('click', (e) => {
-            if (e.target === contactModal) {
-                contactModal.style.display = 'none';
-            }
-        });
-        
-        // Manejar envío del formulario
-        emailForm.addEventListener('submit', (e) => {
+const contactIcon = document.getElementById('contact-icon');
+const contactModal = document.getElementById('contactModal');
+const closeModal = document.getElementById('closeModal');
+const emailForm = document.getElementById('emailForm');
+const successMessage = document.getElementById('successMessage');
+
+// Abrir modal
+contactIcon.addEventListener('click', () => {
+    contactModal.style.display = 'flex';
+});
+
+// Cerrar modal
+closeModal.addEventListener('click', () => {
+    contactModal.style.display = 'none';
+});
+
+// Cerrar modal haciendo clic fuera del contenido
+window.addEventListener('click', (e) => {
+    if (e.target === contactModal) {
+        contactModal.style.display = 'none';
+    }
+});
+
+// Manejar envío del formulario
+emailForm.addEventListener('submit', (e) => {
     e.preventDefault();
 
     // Recoger datos del formulario
@@ -268,28 +268,12 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         message: message
     };
 
-    // Enviar con EmailJS
-    emailjs.send('service_zqw9dbq', 'template_8s62web', templateParams)
-        .then(function(response) {
-            console.log('Correo enviado con éxito', response.status, response.text);
-            successMessage.style.display = 'block';
-            emailForm.reset();
 
-            setTimeout(() => {
-                contactModal.style.display = 'none';
-                setTimeout(() => {
-                    successMessage.style.display = 'none';
-                }, 500);
-            }, 3000);
-        }, function(error) {
-            alert("Hubo un error al enviar el correo. Intenta de nuevo.");
-            console.error('Error al enviar correo:', error);
-        });
 });
-        
-        // Cerrar con la tecla ESC
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape' && contactModal.style.display === 'flex') {
-                contactModal.style.display = 'none';
-            }
-        });
+
+// Cerrar con la tecla ESC
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && contactModal.style.display === 'flex') {
+        contactModal.style.display = 'none';
+    }
+});
