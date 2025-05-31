@@ -8,6 +8,7 @@
     <title>WittyVault</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 </head>
 
 <body>
@@ -185,43 +186,7 @@
         </div>
     </footer>
     <script src="script.js"></script>
-<script type="module">
-  import emailjs from 'https://cdn.emailjs.com/dist/email.min.mjs';
 
-  const form = document.getElementById('emailForm');
-  const successMessage = document.getElementById('successMessage');
-  const contactModal = document.getElementById('contactModal');
-
-  emailjs.init("p6S344g6qyH2ROMKs");
-
-  form.addEventListener('submit', function(e) {
-    e.preventDefault();
-
-    const templateParams = {
-      name: form.name.value,
-      email: form.email.value,
-      title: form.subject.value,
-      message: form.message.value,
-    };
-
-    emailjs.send('service_zqw9dbq', 'template_8s62web', templateParams)
-      .then((response) => {
-        console.log('SUCCESS!', response.status, response.text);
-        successMessage.style.display = 'block';
-        form.reset();
-
-        setTimeout(() => {
-          contactModal.style.display = 'none';
-          setTimeout(() => {
-            successMessage.style.display = 'none';
-          }, 500);
-        }, 3000);
-      }, (error) => {
-        console.log('FAILED...', error);
-        alert("Hubo un error al enviar el correo. Intenta de nuevo.");
-      });
-  });
-</script>
 </body>
 
 </html>
