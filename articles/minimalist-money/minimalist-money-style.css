@@ -86,7 +86,7 @@ nav {
 /* Article-specific styles */
 .article-hero {
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-        url('../../img/hero-image.webp');
+        url('../../img/magnifier2.webp');
     background-size: cover;
     background-position: center;
     color: white;
@@ -94,6 +94,8 @@ nav {
     padding: 6rem 0;
     position: relative;
     margin-bottom: 3rem;
+    width: 100%;
+    height: 100%;
 }
 
 .article-header {
@@ -986,4 +988,188 @@ body:not(.dark-mode) .social-link:hover {
 /* Scroll margin for contact section */
 #contact-section {
     scroll-margin-top: 100px;
+}
+
+/* some changes */
+/* some changes */
+/* some changes */
+/* some changes */
+        .table-of-contents {
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+            border-radius: 15px;
+            padding: 2rem;
+            margin: 2rem 0 3rem 0;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            border-left: 4px solid #4a90e2;
+        }
+
+        .toc-title {
+            color: #2c3e50;
+            margin-bottom: 1.5rem;
+            font-size: 1.4rem;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .toc-title::before {
+            content: "📚";
+            font-size: 1.2rem;
+        }
+
+        .toc-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .toc-item {
+            margin-bottom: 0.8rem;
+            position: relative;
+        }
+
+        .toc-link {
+            display: block;
+            color: #4a90e2;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            font-weight: 500;
+            position: relative;
+        }
+
+        .toc-link:hover {
+            background: #4a90e2;
+            color: white;
+            transform: translateX(5px);
+        }
+
+        .toc-link::before {
+            content: "→";
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            margin-right: 0.5rem;
+        }
+
+        .toc-link:hover::before {
+            opacity: 1;
+        }
+
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Add scroll margin to headers */
+        h2[id] {
+            scroll-margin-top: 120px;
+        }
+
+        /* Active section highlighting */
+        .toc-link.active {
+            background: #4a90e2;
+            color: white;
+        }
+
+        /* Dark mode styles for TOC */
+        body.dark-mode .table-of-contents {
+            background: linear-gradient(135deg, #333, #2b2b2b);
+            border-left-color: #4a90e2;
+        }
+
+        body.dark-mode .toc-title {
+            color: #f5f5f5;
+        }
+
+        body.dark-mode .toc-link {
+            color: #4a90e2;
+        }
+
+        body.dark-mode .toc-link:hover {
+            background: #4a90e2;
+            color: white;
+        }
+
+        /* Responsive TOC */
+        @media (max-width: 768px) {
+            .table-of-contents {
+                padding: 1.5rem;
+                margin: 1.5rem 0 2rem 0;
+            }
+
+            .toc-title {
+                font-size: 1.2rem;
+            }
+
+            .toc-link {
+                padding: 0.4rem 0.8rem;
+                font-size: 0.95rem;
+            }
+        }
+
+        /* Quick jump to top button */
+.back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: #4a90e2;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 60px; 
+    height: 60px; 
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bolder;
+    font-size: 1.3rem; /* make arrow larger */
+}
+
+
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+
+        }
+
+        .back-to-top:hover {
+            background: #357abd;
+            transform: translateY(-3px);
+                        font-weight: bold;
+
+        }
+
+        /* Progress indicator */
+        .reading-progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 4px;
+            background: linear-gradient(90deg, #4a90e2, #357abd);
+            z-index: 1001;
+            transition: width 0.3s ease;
+        }
+
+        @media (max-width: 768px) {
+    .toc-link::before {
+        content: "•";
+        opacity: 1; /* always visible on mobile */
+        margin-right: 0.5rem;
+        color: #4a90e2;
+        font-size: 1.2rem;
+        display: inline-block;
+        transform: translateY(-1px);
+    }
+
+    /* Optional: disable the arrow on hover if it's interfering */
+    .toc-link:hover::before {
+        content: "•";
+    }
 }

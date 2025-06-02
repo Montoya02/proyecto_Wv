@@ -304,3 +304,100 @@ document.addEventListener('DOMContentLoaded', function () {
     // Smooth theme transition
     document.body.style.transition = 'background-color 0.3s ease, color 0.3s ease';
 });
+
+// Some changes
+// Some changes
+// Some changes
+document.addEventListener('DOMContentLoaded', function() {
+            // Smooth scrolling for TOC links
+            const tocLinks = document.querySelectorAll('.toc-link');
+            
+            tocLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href').substring(1);
+                    const targetElement = document.getElementById(targetId);
+                    
+                    if (targetElement) {
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+
+            // Active section highlighting
+            function updateActiveSection() {
+                const sections = document.querySelectorAll('h2[id]');
+                const tocLinks = document.querySelectorAll('.toc-link');
+                
+                let current = '';
+                
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.offsetHeight;
+                    
+                    if (window.scrollY >= sectionTop - 200) {
+                        current = section.getAttribute('id');
+                    }
+                });
+                
+                tocLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === '#' + current) {
+                        link.classList.add('active');
+                    }
+                });
+            }
+
+            // Reading progress bar
+            function updateReadingProgress() {
+                const article = document.querySelector('.article-content');
+                const articleHeight = article.offsetHeight;
+                const articleTop = article.offsetTop;
+                const scrolled = window.scrollY - articleTop;
+                const progress = Math.min(Math.max((scrolled / articleHeight) * 100, 0), 100);
+                
+                document.getElementById('readingProgress').style.width = progress + '%';
+            }
+
+            // Back to top button visibility
+            function updateBackToTop() {
+                const backToTop = document.getElementById('backToTop');
+                if (window.scrollY > 300) {
+                    backToTop.classList.add('visible');
+                } else {
+                    backToTop.classList.remove('visible');
+                }
+            }
+
+            // Event listeners
+            window.addEventListener('scroll', function() {
+                updateActiveSection();
+                updateReadingProgress();
+                updateBackToTop();
+            });
+
+            // Initial calls
+            updateActiveSection();
+            updateReadingProgress();
+            updateBackToTop();
+        });
+
+        // Back to top function
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+
+        // Add keyboard navigation for accessibility
+        document.addEventListener('keydown', function(e) {
+            // Alt + T to focus on table of contents
+            if (e.altKey && e.key === 't') {
+                e.preventDefault();
+                document.querySelector('.toc-link').focus();
+            }
+        });

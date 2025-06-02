@@ -6,20 +6,22 @@
     <meta name="robots" content="noindex, nofollow">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Minimalist Money | WittyVault</title>
+    <meta name="description"
+        content="A simple guide to managing money for people who hate finance. Learn minimalist budgeting, investing, and debt strategies.">
+    <!-- <link rel="canonical" href="https://WittyVault.com/minimalist-money"> -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="minimalist-money-style.css">
 </head>
 
-</head>
 
 <body>
+    <div class="reading-progress" id="readingProgress"></div>
     <header>
         <nav class="container">
             <a href="../../" class="logo">WittyVault</a>
             <ul class="nav-links">
                 <li><a href="../../">Home</a></li>
                 <li><a href="../">Articles</a></li>
-                <li><a href="#contact-section">Contact</a></li>
                 <button id="darkModeToggle" class="dark-toggle material-icons">dark_mode</button>
             </ul>
         </nav>
@@ -39,31 +41,79 @@
     <main class="container">
         <article class="article-content">
             <p class="article-intro">
-                Look, I get it. The moment someone mentions "budgeting spreadsheets" or "asset allocation," your eyes
-                probably glaze over. You're not alone. Most of us would rather binge-watch Netflix than dive into
-                financial planning. But here's the thing – managing your money doesn't have to be complicated or
-                time-consuming.
+                I get it,
+                the moment you hear terms like “budgeting spreadsheets” or “asset allocation,” it’s easy to feel
+                overwhelmed. You’re definitely not alone. Many prefer watching a show over tackling financial planning.
+                The great news is, managing your money can be straightforward and efficient.
+            </p>
+            <p>
+                There are many different profiles for people when it comes to money, so here you will read different
+                approaches and strategies
+                that you can apply depending on your personality. The brightside is that you can even mix some of them
+                and create some plans with them.
             </p>
 
+            <!-- Table of Contents -->
+            <div class="table-of-contents">
+                <h3 class="toc-title">What You'll Learn</h3>
+                <ol class="toc-list">
+                    <li class="toc-item">
+                        <a href="#pareto-wallet" class="toc-link">The 80/20 Rule for Your Wallet</a>
+                    </li>
+                    <li class="toc-item">
+                        <a href="#automate-everything" class="toc-link">Automate Everything</a>
+                    </li>
+                    <li class="toc-item">
+                        <a href="#two-account-trick" class="toc-link">The Two-Account Trick</a>
+                    </li>
+                    <li class="toc-item">
+                        <a href="#emergency-fund" class="toc-link">Emergency Fund: Start Stupidly Small</a>
+                    </li>
+                    <li class="toc-item">
+                        <a href="#simple-investing" class="toc-link">Investing: Keep It Brain-Dead Simple</a>
+                    </li>
+                    <li class="toc-item">
+                        <a href="#debt-strategy" class="toc-link">Debt: The Snowball vs. Avalanche Debate</a>
+                    </li>
+                    <li class="toc-item">
+                        <a href="#purchase-rule" class="toc-link">The 24-Hour Rule for Big Purchases</a>
+                    </li>
+                    <li class="toc-item">
+                        <a href="#track-net-worth" class="toc-link">Track Your Net Worth, Not Your Daily Spending</a>
+                    </li>
+                    <li class="toc-item">
+                        <a href="#red-flags" class="toc-link">Red Flags That Actually Matter</a>
+                    </li>
+                    <li class="toc-item">
+                        <a href="#invest-yourself" class="toc-link">Invest in Yourself</a>
+                    </li>
+                </ol>
+            </div>
             <div class="article-body">
-                <h2>The 80/20 Rule for Your Wallet</h2>
-                <p>Remember Pareto's principle? About 80% of your financial success comes from just 20% of the actions
-                    you take. Instead of tracking every coffee purchase, focus on the big stuff that actually moves the
-                    needle.</p>
+                <h2 id="pareto-wallet">The 80/20 Rule for Your Wallet</h2>
+                <p>Have you heard about the 80/20 rule? Basically, 80% of your financial success comes from 20% of what
+                    you actually do. So why stress over every latte? Focus on the big moves that make a real difference.
+                </p>
 
                 <div class="key-point">
-                    <h4>The Big Three that matter most:</h4>
+                    <h4>Here’s your shortlist:</h4>
                     <ul>
-                        <li><strong>Where your paycheck goes</strong> each month</li>
+                        <li><strong>Where your paycheck goes each month</strong></li>
                         <li><strong>How much you're saving</strong> (and where)</li>
-                        <li><strong>What debt you're carrying</strong></li>
+                        <li><strong>The debt you owe</strong></li>
                     </ul>
                     <p>That's it. Master these three things, and you're already ahead of most people.</p>
                 </div>
+                <p>I used to use apps to track every expense, but that didn't change that much
+                    for me, usually is just extra stress you put to yourself. So the thing that we really need it's to
+                    have a clear idea and split of our money
+                    in these categories so we can plan what to do next (here is when investment
+                    often appears)
+                </p>
 
-                <h2>Automate Everything (Seriously, Everything)</h2>
+                <h2 id="automate-everything">Automate Everything</h2>
                 <p>The best financial system is the one you don't have to think about. Set up automatic transfers for
-                    savings, bill payments, and investments. It's like putting your money on cruise control.</p>
+                    savings, bill payments, and investments. So your money basically manages itself.</p>
 
                 <div class="infographic">
                     <h3 class="infographic-title">Simple Automation Setup</h3>
@@ -85,9 +135,10 @@
                     </p>
                 </div>
 
-                <p>Once it's set up, you can literally forget about it. Your future self will thank you.</p>
+                <p>Direct deposit makes it even easier by splitting your paycheck automatically. Set it and forget it —
+                    your future self will be grateful.</p>
 
-                <h2>The Two-Account Trick</h2>
+                <h2 id="two-account-trick">The Two-Account Trick</h2>
                 <p>Forget complicated budgets with 15 categories. Use just two accounts:</p>
 
                 <div class="action-step">
@@ -107,41 +158,63 @@
                     <p style="margin-top: 1rem; font-weight: bold;">It's budgeting without the spreadsheet headache.</p>
                 </div>
 
-                <h2>Emergency Fund: Start Stupidly Small</h2>
+                <h2 id="emergency-fund">#!#!#!#Emergency Fund: Start Stupidly Small</h2>
                 <p>Everyone says you need 3-6 months of expenses saved. That's great advice, but if you're starting from
                     zero, it's also paralyzing. Instead, start with $500. Just $500.</p>
                 <p>That small buffer handles most of life's minor emergencies – car repairs, medical co-pays, or that
                     time your laptop decides to die during finals week. Once you hit $500, bump it to $1,000. Then
                     $2,000. Baby steps work.</p>
 
-                <h2>Investing: Keep It Brain-Dead Simple</h2>
-                <p>You don't need to become the next Warren Buffett. You don't need to research individual stocks or
-                    time the market. You just need to start.</p>
+                <h2 id="simple-investing">Investing: Keep It Brain-Dead Simple</h2>
+                <p>Forget trying to outsmart the market. You don’t need to pick stocks or watch CNBC all day (unless you
+                    want to). Just set it up and let your money grow.</p>
 
                 <div class="quote-block">
-                    <p class="quote-text">The lazy investor's portfolio:</p>
+                    <p class="quote-text">An example of the lazy investor's portfolio:</p>
                     <ul style="color: white; margin-left: 2rem;">
                         <li><strong>70% total stock market index fund</strong></li>
                         <li><strong>30% bond index fund</strong></li>
                     </ul>
                     <p class="quote-text" style="margin-top: 1.5rem;">That's it. Rebalance once a year. This boring
-                        approach beats most active traders and requires about 15 minutes of your time annually.</p>
-                </div>
+                        approach beats most active traders and requires about 30 minutes of your time annually.</p>
 
-                <h2>Debt: The Snowball vs. Avalanche Debate</h2>
-                <p>Math says pay off high-interest debt first (avalanche method). Psychology says pay off small debts
-                    first for quick wins (snowball method).</p>
+                </div>
+                <p>Imagine this: you invest $300 a month for 35 years with a 10% annual return. You’d end up with over
+                    $1 million. If you just saved that money in a regular bank account, you’d have about $126,000.
+
+                    That’s the power of compound interest (we’ll break it down in another article) — it can make you
+                    rich without being a financial genius.</p>
+
+                <h2 id="debt-strategy">Debt: The Snowball vs. Avalanche Debate</h2>
+                <p>There are two main ways to pay off debt:
+
+                    Avalanche: Pay off the debt with the highest interest rate first. This saves you more money over
+                    time.
+
+                    Snowball: Pay off the smallest debt first. This gives you quick wins and a motivation boost.
+
+                    Which one’s better? Honestly, whichever one keeps you going. If wiping out a balance makes you feel
+                    like a boss, go snowball. If you love seeing the numbers work in your favor, avalanche is for you.
+
+                    The real win? Sticking with it. Doesn’t matter how you attack your debt — as long as you’re moving
+                    forward, you’re doing it right.</p>
                 <p>Here's the truth: <strong>The best method is the one you'll actually stick with.</strong> If seeing
                     debts disappear motivates you, go snowball. If saving money on interest fires you up, go avalanche.
                     Both work if you work them.</p>
 
-                <h2>The 24-Hour Rule for Big Purchases</h2>
-                <p>Before buying anything over $100 (or whatever amount makes you pause), wait 24 hours. For really big
-                    purchases, wait a week. You'll be amazed how many "must-have" items suddenly lose their appeal.</p>
-                <p>This isn't about depriving yourself – it's about making sure you're buying things you actually want,
-                    not just things that caught your eye.</p>
+                <h2 id="purchase-rule">The 24-Hour Rule for Big Purchases</h2>
+                <p>Before buying something that feels like an upgrade — whether it’s a new gadget, designer item, or
+                    spontaneous indulgence — give yourself a day to think. For bigger splurges, wait a few more.
 
-                <h2>Track Your Net Worth, Not Your Daily Spending</h2>
+                </p>
+                <p>You might realize that what seemed essential in the moment doesn’t really hold up the next day.
+                </p>
+                <p>It’s not about guilt — it’s about making sure your purchases truly align with your values, not just a
+                    passing impulse.
+
+                </p>
+
+                <h2 id="track-net-worth">Track Your Net Worth, Not Your Daily Spending</h2>
                 <p>Forget about logging every transaction. Instead, check your net worth monthly. Add up everything you
                     own, subtract what you owe. That's your financial scorecard.</p>
                 <p>Use a simple app or even a basic spreadsheet. The goal is watching that number grow over time, even
@@ -154,7 +227,7 @@
                     <p>Don't let perfect be the enemy of good. Start where you are, with what you have.</p>
                 </div>
 
-                <h2>Red Flags That Actually Matter</h2>
+                <h2 id="red-flags">Red Flags That Actually Matter</h2>
                 <p>While we're keeping things simple, watch out for these warning signs:</p>
 
                 <ul>
@@ -174,7 +247,7 @@
                         automate what you can, and stay consistent. The rest will take care of itself.</p>
                 </div>
 
-                <h2>Invest in Yourself (It's Not Mandatory, But It Pays Off)</h2>
+                <h2 id="invest-yourself">Invest in Yourself (It's Not Mandatory, But It Pays Off)</h2>
                 <p>Here's something most finance articles won't tell you: sometimes the best investment isn't in the
                     stock market – it's in yourself. You don't have to do this, but learning new skills or deepening
                     your knowledge can literally pay dividends.</p>
@@ -188,6 +261,9 @@
                         <li>Understanding taxes better might save you money every year</li>
                     </ul>
                 </div>
+                <button class="back-to-top" id="backToTop" onclick="scrollToTop()">
+                    ↑
+                </button>
 
                 <div class="action-step">
                     <div class="action-title">
@@ -212,15 +288,17 @@
                 <p>Remember, you're not just managing money – you're building the skills to make more of it.</p>
 
                 <h2>The Bottom Line</h2>
-                <p>Start with one thing from this article. Just one. Maybe it's setting up that automatic savings
-                    transfer, or maybe it's finally checking your net worth. Small steps compound into big results.</p>
-                <p>Your money doesn't have to be complicated. Keep it simple, keep it consistent, and keep moving
-                    forward.</p>
+                <p>Start with just one thing from this article. One small step — whether it’s setting up automatic savings or finally checking your net worth. These small actions add up over time.</p>
+                <p>You can also mix and match some of these ideas—for example, combining the two-account strategy with automation. The key is to find what fits your personality and what you’ll actually stick with.</p>
+                <p>Managing your money doesn’t have to be complicated. Keep it simple, stay consistent, and keep making progress.
+
+</p>
 
                 <div class="resources">
                     <h3><span class="material-icons">menu_book</span> Key Sources & Inspiration</h3>
-                    <p>Here are some books that I used in order to give this advices and you can look further into each
-                        one by reading themselves by yourself if you want to.</p>
+                    <p>These are some of the books I used to gather the advice here. If you want to dive deeper, I highly recommend checking them out yourself.
+
+</p>
                     <div class="resource-list">
                         <div class="resource-item">
                             <div class="resource-title">The Simple Path to Wealth</div>
@@ -256,29 +334,40 @@
         </article>
     </main>
 
-    <footer id="contact">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>About WittyVault</h3>
-                    <p>Think of us as a helpful companion on your path to financial freedom. We're here to share honest
-                        advice, practical tips, and easy-to-follow guides to help you make smarter money choices.</p>
-                </div>
-
-
+<footer id="contact">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About WittyVault</h3>
+                <p>Think of us as a helpful companion on your path to financial freedom. We're here to share honest
+                    advice, practical tips, and easy-to-follow guides to help you make smarter money choices.</p>
+                <br>
+                <p>If you want to communicate with us just go to the <b>contact</b> section in the <a href="../../"
+                        class="back-to-articles">home page</a>.</p>
             </div>
-
-            <div class="social-links" id="contact-section">
-                <a href="mailto:example@gmail.com" class="social-link" id="contact-icon">
-                    <span class="material-icons">mail</span>
-                </a>
-            </div>
-
-            <p style="margin-top: 2rem; padding-top: 2rem; border-top: 1px solid #34495e; color: #bdc3c7;">
-                © 2025 WittyVault. All rights reserved. Make your financial future greater.
-            </p>
         </div>
-    </footer>
+
+        <p style="margin-top: 2rem; padding-top: 1rem; border-top: 1px solid #34495e; color: #bdc3c7; font-size: 0.8rem;">
+            Disclaimer: The information provided on this site is for educational purposes only and does not constitute professional financial advice. Please consult a qualified expert before making financial decisions.
+        </p>
+
+        <p style="margin-top: 1rem; color: #bdc3c7;">
+            © 2025 WittyVault. All rights reserved. Make your financial future greater.
+        </p>
+    </div>
+</footer>
+
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Minimalist Money: Personal Finance for People Who Hate Finance",
+  "author": {
+    "@type": "Organization",
+    "name": "WittyVault"
+  }
+}
+</script>
     <script src="minimalist-money-script.js"></script>
 </body>
 

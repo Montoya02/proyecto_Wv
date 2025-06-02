@@ -71,7 +71,7 @@
                 <article class="article-card" data-tags="budgeting,mindset">
                     <a href="../articles/minimalist-money/" class="article-link">
                         <div class="article-image">
-                            <img src="../img/magnifier1.jpg" alt="Minimalist workspace with calculator and notebook">
+                            <img src="../img/magnifier1.webp" alt="Minimalist workspace with calculator and notebook" class="image-cover">
                         </div>
                         <div class="article-content">
                             <div class="article-tags">
@@ -82,7 +82,7 @@
                             <p>Skip the complicated budgets and spreadsheets. Learn how to manage your money with
                                 simple,
                                 automated systems that actually work.</p>
-                            <span class="article-link">Read More</span>
+                            <span class="read-more">Read More</span>
                         </div>
                     </a>
                 </article>
@@ -101,7 +101,7 @@
                             <p>Ready-to-use budget templates designed specifically for nurses working irregular hours
                                 and
                                 demanding schedules.</p>
-                            <span class="article-link">Read More</span>
+                            <span class="read-more">Read More</span>
                         </div>
                     </a>
                 </article>
@@ -120,7 +120,7 @@
                             <p>Real advice for real couples navigating money, dreams, and everything in between without
                                 the
                                 financial stress.</p>
-                            <span class="article-link">Read More</span>
+                            <span class="read-more">Read More</span>
                         </div>
                     </a>
                 </article>
@@ -139,7 +139,7 @@
                             <h3>Investment Psychology: Why Your Brain Works Against Your Wallet</h3>
                             <p>Understand the mental traps that sabotage your investment decisions and learn simple
                                 strategies to outsmart your own biases.</p>
-                            <span class="article-link">Read More</span>
+                            <span class="read-more">Read More</span>
                         </div>
                     </a>
                 </article>
@@ -158,7 +158,7 @@
                             <p>Master the art of financial stability when your income changes every month. Practical
                                 tips
                                 for freelancers and gig workers.</p>
-                            <span class="article-link">Read More</span>
+                            <span class="read-more">Read More</span>
                         </div>
                     </a>
                 </article>
@@ -177,7 +177,7 @@
                             <h3>Money Anxiety to Money Confidence: A Mental Reset</h3>
                             <p>Transform your relationship with money by addressing the psychological roots of financial
                                 stress and building lasting confidence.</p>
-                            <span class="article-link">Read More</span>
+                            <span class="read-more">Read More</span>
                         </div>
                     </a>
                 </article>
@@ -205,13 +205,50 @@
                     <span class="material-icons">mail</span>
                 </a>
             </div>
-
+        <p style="margin-top: 2rem; padding-top: 1rem; border-top: 1px solid #34495e; color: #bdc3c7; font-size: 0.8rem;">
+            Disclaimer: The information provided on this site is for educational purposes only and does not constitute professional financial advice. Please consult a qualified expert before making financial decisions.
+        </p>
             <p style="margin-top: 2rem; padding-top: 2rem; border-top: 1px solid #34495e; color: #bdc3c7;">
                 © 2025 WittyVault. All rights reserved. Make your financial future greater.
             </p>
         </div>
     </footer>
+    <div id="contactModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Contact Us</h2>
+            <form id="contact-form" class="contact-form-p">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" name="subject" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="4" required class="textareaForm"></textarea>
+                </div>
+
+                <button type="submit" class="cta-button">Send Message</button>
+            </form>
+            <div id="formMessages"></div>
+        </div>
+    </div>
     <script src="articles-script.js"></script>
+    <!-- cdn ejs-->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        emailjs.init('p6S344g6qyH2ROMKs');
+    </script>
 </body>
 
 </html>

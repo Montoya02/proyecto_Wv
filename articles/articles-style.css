@@ -353,7 +353,7 @@ nav {
 }
 
 .article-image::after {
-    content: 'Read Article →';
+    content: 'Read Article';
     position: absolute;
     top: 0;
     left: 0;
@@ -422,10 +422,7 @@ nav {
     color: #357abd;
 }
 
-.article-link::after {
-    content: ' →';
-    transition: transform 0.3s ease;
-}
+
 
 .article-link:hover::after {
     transform: translateX(5px);
@@ -762,3 +759,395 @@ html {
         font-size: 0.9rem;
     }
 }
+
+/* new changes to email conection */
+/* new changes to email conection */
+/* new changes to email conection */
+/* new changes to email conection */
+/* Modal Overlay */
+ .modal {
+     display: none;
+     position: fixed;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     background-color: rgba(0, 0, 0, 0.7);
+     z-index: 1000;
+     backdrop-filter: blur(5px);
+     opacity: 0;
+     transition: opacity 0.3s ease;
+ }
+
+ .modal.show {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     opacity: 1;
+ }
+
+ /* Modal Content */
+ .modal-content {
+     position: relative;
+     background: white;
+     border-radius: 20px;
+     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+     width: 100%;
+     max-width: 500px;
+     padding: 1rem;
+     transform: translateY(-30px);
+     transition: transform 0.4s ease, opacity 0.4s ease;
+     opacity: 0;
+
+ }
+
+ .modal.show .modal-content {
+     transform: translateY(0);
+     opacity: 1;
+ }
+
+ /* Modal Header */
+ .modal-content h2 {
+     color: #4a90e2;
+     text-align: center;
+     margin-bottom: 1.8rem;
+     font-size: 2rem;
+     position: relative;
+ }
+
+ .modal-content h2::after {
+     content: '';
+     position: absolute;
+     bottom: -10px;
+     left: 50%;
+     transform: translateX(-50%);
+     width: 60px;
+     height: 3px;
+     background: linear-gradient(45deg, #4a90e2, #357abd);
+     border-radius: 2px;
+ }
+
+ /* Close Button */
+ .close {
+     position: absolute;
+     top: 20px;
+     right: 20px;
+     color: #aaa;
+     font-size: 28px;
+     font-weight: bold;
+     cursor: pointer;
+     transition: all 0.3s ease;
+ }
+
+ .close:hover {
+     color: #4a90e2;
+     transform: scale(1.1);
+ }
+
+ /* Form Elements */
+ .form-group {
+     margin-bottom: 1.5rem;
+ }
+
+ .form-group label {
+     display: block;
+     margin-bottom: 0.5rem;
+     color: #555;
+     font-weight: 500;
+ }
+
+ .form-group input,
+ .form-group textarea {
+     width: 100%;
+     padding: 12px 15px;
+     border: 1px solid #ddd;
+     border-radius: 10px;
+     font-size: 1rem;
+     transition: all 0.3s ease;
+     background: #f9f9f9;
+ }
+
+ .form-group input:focus,
+ .form-group textarea:focus {
+     outline: none;
+     border-color: #4a90e2;
+     box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.2);
+     background: white;
+ }
+
+ .form-group textarea {
+     min-height: 120px;
+     resize: vertical;
+ }
+
+ /* Submit Button */
+ .cta-button[type="submit"] {
+     width: 100%;
+     border: none;
+     cursor: pointer;
+     margin-top: 1rem;
+     padding: 1rem;
+     font-size: 1.1rem;
+     animation: none;
+ }
+
+ /* Form Messages */
+ #formMessages {
+     margin-top: 1.5rem;
+     padding: 0.8rem;
+     border-radius: 8px;
+     text-align: center;
+     font-weight: 500;
+ }
+
+ #formMessages.success {
+     background-color: rgba(46, 204, 113, 0.15);
+     color: #27ae60;
+ }
+
+ #formMessages.error {
+     background-color: rgba(231, 76, 60, 0.15);
+     color: #c0392b;
+ }
+
+ /* Dark Mode Styles for Modal */
+ body.dark-mode .modal-content {
+     background: #2b2b2b;
+     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+ }
+
+ body.dark-mode .modal-content h2 {
+     color: #4a90e2;
+ }
+
+ body.dark-mode .form-group label {
+     color: #ddd;
+ }
+
+ body.dark-mode .form-group input,
+ body.dark-mode .form-group textarea {
+     background: #333;
+     border-color: #444;
+     color: #f0f0f0;
+ }
+
+ body.dark-mode .form-group input:focus,
+ body.dark-mode .form-group textarea:focus {
+     border-color: #4a90e2;
+     box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.3);
+     background: #3a3a3a;
+ }
+
+ /* Responsive Adjustments */
+ @media (max-width: 600px) {
+     .modal-content {
+         padding: 1.8rem;
+         width: 100%;
+     }
+
+     .modal-content h2 {
+         font-size: 1.7rem;
+     }
+ }
+
+ /* */
+ /* */
+ /* */
+ .form-group {
+     position: relative;
+     /* For asterisk positioning */
+ }
+
+ /* Update label styles */
+ .form-group label {
+     display: flex;
+     /* Better alignment */
+     margin-bottom: 0.5rem;
+     color: #555;
+     font-weight: 500;
+ }
+
+ /* Add asterisk for required fields */
+ .form-group label::after {
+     content: '*';
+     color: #e74c3c;
+     margin-left: 4px;
+ }
+
+ /* Update input/textarea styles */
+ .form-group input,
+ .form-group textarea {
+     width: 100%;
+     padding: 12px 15px;
+     border: 1px solid #ddd;
+     border-radius: 8px;
+     /* Slightly smaller radius */
+     font-size: 1rem;
+     transition: all 0.3s ease;
+     background: #f9f9f9;
+ }
+
+ /* Adjust button styles */
+ .cta-button[type="submit"] {
+     display: block;
+     width: 100%;
+     /* Full width */
+     margin: 1.5rem auto 0;
+     /* Better spacing */
+     padding: 14px;
+     /* Slightly taller */
+ }
+
+ /* Improve responsive layout */
+ @media (max-width: 600px) {
+     .modal-content {
+         padding: 1.5rem;
+     }
+
+     .form-group {
+         margin-bottom: 1.2rem;
+     }
+ }
+
+ .modal-content {
+     max-height: 85vh;
+     /* Limit height */
+     overflow-y: auto;
+     /* Enable scrolling */
+     padding: 2rem;
+     /* Increase padding */
+ }
+
+ .form-group {
+     margin-bottom: 1.2rem;
+     /* Reduce spacing */
+ }
+
+ .textareaForm {
+     min-height: 100px;
+     /* Reduce min height */
+     max-height: 150px;
+     /* Limit max height */
+ }
+
+ .cta-button[type="submit"] {
+     margin-top: 0.5rem;
+     /* Reduce top margin */
+ }
+
+ #formMessages {
+     padding: 0.5rem;
+     /* Reduce padding */
+     margin-top: 0.5rem;
+     /* Reduce top margin */
+ }
+
+ /* Modal */
+ /* Modal */
+ /* Modal */
+ /* Modal */
+ body.modal-open {
+     overflow: hidden;
+ }
+
+ /* Better scrollbar for modal content */
+ .modal-content::-webkit-scrollbar {
+     width: 8px;
+ }
+
+ .modal-content::-webkit-scrollbar-track {
+     background: #f1f1f1;
+     border-radius: 10px;
+ }
+
+ .modal-content::-webkit-scrollbar-thumb {
+     background: #888;
+     border-radius: 10px;
+ }
+
+ .modal-content::-webkit-scrollbar-thumb:hover {
+     background: #555;
+ }
+
+ /* Dark mode scrollbar */
+ body.dark-mode .modal-content::-webkit-scrollbar-track {
+     background: #333;
+ }
+
+ body.dark-mode .modal-content::-webkit-scrollbar-thumb {
+     background: #555;
+ }
+
+ body.dark-mode .modal-content::-webkit-scrollbar-thumb:hover {
+     background: #777;
+ }
+ /* Enhanced CTA button with subtle pulse effect */
+ .cta-button {
+     display: inline-block;
+     background: linear-gradient(45deg, #4a90e2, #357abd);
+     color: white;
+     padding: 1rem 2.5rem;
+     text-decoration: none;
+     border-radius: 50px;
+     font-weight: bold;
+     font-size: 1.1rem;
+     transition: all 0.3s ease;
+     box-shadow: 0 4px 15px rgba(74, 144, 226, 0.4);
+     animation: fadeInUp 1s ease 0.6s both, subtlePulse 3s ease-in-out infinite;
+     position: relative;
+     overflow: hidden;
+ }
+
+ .cta-button::before {
+     content: '';
+     position: absolute;
+     top: 0;
+     left: -100%;
+     width: 100%;
+     height: 100%;
+     background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+     transition: left 0.5s;
+ }
+
+ .cta-button:hover::before {
+     left: 100%;
+ }
+
+ .cta-button:hover {
+     transform: translateY(-3px);
+     box-shadow: 0 8px 25px rgba(74, 144, 226, 0.6);
+ }
+
+ @keyframes subtlePulse {
+
+     0%,
+     100% {
+         box-shadow: 0 4px 15px rgba(74, 144, 226, 0.4);
+     }
+
+     50% {
+         box-shadow: 0 4px 20px rgba(74, 144, 226, 0.6);
+     }
+ }
+
+ .read-more {
+     color: #4a90e2;
+     text-decoration: none;
+     font-weight: bold;
+     transition: all 0.3s ease;
+     position: relative;
+
+ }
+
+ .read-more:hover {
+     color: #357abd;
+ }
+
+ .read-more::after {
+     content: ' →';
+     transition: transform 0.3s ease;
+ }
+
+ .read-more:hover::after {
+     transform: translateX(5px);
+ }
