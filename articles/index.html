@@ -43,6 +43,8 @@
                     <input type="text" class="search-input" placeholder="Search articles by title or topic..."
                         id="searchInput" aria-label="Search articles">
                     <span class="material-icons search-icon">search</span>
+                    <span class="material-icons clear-icon" id="clearSearchIcon" style="display: none;">close</span>
+
                 </div>
             </div>
         </div>
@@ -71,7 +73,10 @@
                 <article class="article-card" data-tags="budgeting,mindset">
                     <a href="../articles/minimalist-money/" class="article-link">
                         <div class="article-image">
-                            <img src="../img/magnifier1.webp" alt="Minimalist workspace with calculator and notebook" class="image-cover">
+                            <img src="../img/magnifier1.webp" alt="Minimalist workspace with calculator and notebook"
+                                class="image-cover"
+                                srcset="../img/magnifier1.webp 300w, ../img/magnifierMedium.jpg 600w, ../img/magnifier2.jpg 1200w"
+                                sizes="(min-width: 1024px) 33vw, (min-width: 600px) 50vw, 100vw">
                         </div>
                         <div class="article-content">
                             <div class="article-tags">
@@ -87,24 +92,17 @@
                     </a>
                 </article>
 
-                <article class="article-card" data-tags="budgeting,career">
-                    <a href="../articles/nurses-budget" class="article-link">
-                        <div class="article-image">
-                            <img src="../img/planner.jpg" alt="Medical stethoscope and financial planning documents">
-                        </div>
-                        <div class="article-content">
-                            <div class="article-tags">
-                                <span class="article-tag">Budgeting</span>
-                                <span class="article-tag">Career</span>
-                            </div>
-                            <h3>Budget Templates for Nurses: Smart Money Tools for Every Shift</h3>
-                            <p>Ready-to-use budget templates designed specifically for nurses working irregular hours
-                                and
-                                demanding schedules.</p>
-                            <span class="read-more">Read More</span>
-                        </div>
-                    </a>
-                </article>
+<article class="article-card" data-tags="budgeting,career">
+    <a href="../articles/nurses-budget" class="article-link">
+        <div class="article-image">
+            <img src="../img/planner.jpg" alt="Medical stethoscope and financial planning documents" 
+                 class="image-cover"
+                 srcset="../img/planner.jpg 300w, ../img/plannerMedium.jpg 600w, ../img/plannerBig.jpg 1200w"
+                 sizes="(min-width: 1024px) 33vw, (min-width: 600px) 50vw, 100vw">
+        </div>
+        <!-- rest of the content -->
+    </a>
+</article>
 
                 <article class="article-card" data-tags="couples,budgeting">
                     <a href="../articles/couples-finance/" class="article-link">
@@ -205,9 +203,12 @@
                     <span class="material-icons">mail</span>
                 </a>
             </div>
-        <p style="margin-top: 2rem; padding-top: 1rem; border-top: 1px solid #34495e; color: #bdc3c7; font-size: 0.8rem;">
-            Disclaimer: The information provided on this site is for educational purposes only and does not constitute professional financial advice. Please consult a qualified expert before making financial decisions.
-        </p>
+            <p
+                style="margin-top: 2rem; padding-top: 1rem; border-top: 1px solid #34495e; color: #bdc3c7; font-size: 0.8rem;">
+                Disclaimer: The information provided on this site is for educational purposes only and does not
+                constitute professional financial advice. Please consult a qualified expert before making financial
+                decisions.
+            </p>
             <p style="margin-top: 2rem; padding-top: 2rem; border-top: 1px solid #34495e; color: #bdc3c7;">
                 © 2025 WittyVault. All rights reserved. Make your financial future greater.
             </p>

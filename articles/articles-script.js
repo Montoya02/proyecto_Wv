@@ -305,3 +305,101 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 // new form changes 
 // new form changes 
+// Contact Form Modal functionality
+const modal = document.getElementById("contactModal");
+const contactIcon = document.getElementById("contact-icon");
+const closeBtn = document.querySelector(".close");
+const contactForm = document.getElementById("contact-form");
+const formMessages = document.getElementById("formMessages");
+
+// Open modal when contact icon is clicked
+contactIcon.addEventListener("click", (e) => {
+    e.preventDefault();
+    modal.style.display = "block";
+    document.body.style.overflow = "hidden";
+
+    // Add class to body to prevent scrolling
+    document.body.classList.add("modal-open");
+
+    setTimeout(() => {
+        modal.classList.add("show");
+    }, 10);
+});
+
+// Add this to close handler
+closeBtn.addEventListener("click", () => {
+    modal.classList.remove("show");
+    setTimeout(() => {
+        modal.style.display = "none";
+        document.body.style.overflow = "auto";
+        document.body.classList.remove("modal-open");
+    }, 300);
+});
+
+// Close modal when clicking outside
+window.addEventListener("click", (e) => {
+    if (e.target === modal) {
+        modal.style.display = "none";
+        document.body.style.overflow = "auto";
+    }
+});
+
+// Form submission handler
+contactForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    // Reset messages
+    formMessages.className = "";
+    formMessages.textContent = "";
+
+    // Validate form
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const subject = document.getElementById("subject").value;
+    const message = document.getElementById("message").value;
+
+    if (!name || !email || !subject || !message) {
+        showMessage("Please fill in all required fields", "error");
+        return;
+    }
+
+    // Send email using EmailJS
+    emailjs.sendForm(
+        'service_zqw9dbq',
+        'template_8s62web',
+        contactForm
+    )
+        .then(() => {
+            showMessage("Message sent successfully!", "success");
+            contactForm.reset();
+        })
+        .catch((error) => {
+            showMessage("Failed to send message. Please try again.", "error");
+            console.error('EmailJS error:', error);
+        });
+});
+
+// Show form messages
+function showMessage(message, type) {
+    formMessages.textContent = message;
+    formMessages.className = type;
+}
+//
+//
+//
+// Clear search functionality
+const clearSearchIcon = document.getElementById('clearSearchIcon');
+
+if (clearSearchIcon && searchInput) {
+    clearSearchIcon.addEventListener('click', function() {
+        searchInput.value = '';
+        filterArticles('', getActiveFilter());
+        searchInput.focus();
+        clearSearchIcon.style.display = 'none';
+    });
+
+    // Show/hide clear icon based on input
+    searchInput.addEventListener('input', function() {
+        clearSearchIcon.style.display = this.value ? 'block' : 'none';
+    });
+}

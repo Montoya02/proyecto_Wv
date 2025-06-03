@@ -13,7 +13,7 @@ body {
 }
 
 .container {
-    max-width: 1200px;
+    max-width: 1050px;
     margin: 0 auto;
     padding: 0 20px;
 }
@@ -412,7 +412,6 @@ nav {
 .article-link {
     color: #4a90e2;
     text-decoration: none;
-    font-weight: bold;
     transition: all 0.3s ease;
     position: relative;
     display: inline-block;
@@ -1151,3 +1150,62 @@ html {
  .read-more:hover::after {
      transform: translateX(5px);
  }
+
+ /* */ 
+ /* */ 
+ /* */ 
+ /* */ 
+ .search-box {
+    position: relative;
+}
+
+.clear-icon {
+    position: absolute;
+    right: 1.2rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #666;
+    font-size: 1.3rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.clear-icon:hover {
+    color: #4a90e2;
+    transform: translateY(-50%) scale(1.1);
+}
+
+.search-input:not(:placeholder-shown) + .search-icon + .clear-icon {
+    display: block;
+}
+/* Add to articles-style.css */
+.article-image {
+    position: relative;
+    overflow: hidden;
+    height: 200px;
+    width: 100%; /* Ensure full width */
+}
+
+.image-cover {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    top: 0;
+    left: 0;
+}
+
+.article-image {
+    position: relative;
+    overflow: hidden;
+    height: 200px;
+    width: 100%;
+}
+
+.article-image img:not(.image-cover) {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
